@@ -1,4 +1,4 @@
-def HtmlToRgb(colorstring):
+def html_to_rgb(colorstring):
     colorstring = colorstring.strip()
     if colorstring[0] == '#': colorstring = colorstring[1:]
     if len(colorstring) != 6:
@@ -6,6 +6,16 @@ def HtmlToRgb(colorstring):
     r, g, b = colorstring[:2], colorstring[2:4], colorstring[4:]
     r, g, b = [int(n, 16) for n in (r, g, b)]
     return "{}, {}, {}".format(r,g,b)
+
+
+
+def rgb_to_html(rgb_tuple):
+    """ convert an (R, G, B) tuple to #RRGGBB """
+    hexcolor = '#%02x%02x%02x' % rgb_tuple
+
+
+
+
 
 #===============================================================================
 # copypasta of colorschemes and stuff here, use vim or something sensible to
