@@ -22,30 +22,49 @@ def rgb_to_html(rgb_tuple):
 # arrange everything... it's not ideal, but it's better than the alternative!
 #===============================================================================
 
+background=        "#252627"
+foreground=        "#D8D8D8"
+#*cursorColor:       #999999
+#*colorBD:           #ffffff
+#*colorUL:           #99cc66
+
+colors= [  "#3E3E3E",
+           "#CF516E",
+           "#799351",
+           "#ccc855",
+           "#6FA5C7",
+           "#b374a7",
+           "#75a692",
+           "#BBBBBB",
+           "#525252",
+           "#E87B94",
+           "#8fa966",
+           "#d1c78e",
+           "#A4c9e0",
+           "#d1a3c8",
+           "#89bca7",
+           "#EEEEEE"]
 
 name = "pytest"
 opacity = "0.9"
-
-background=  "#2D2C28"
-foreground=  "#A4A6AB"
-
-
-colors = [  "#5B5955",
-            "#C4756E",
-            "#559A6A",
-            "#9B8A4B",
-            "#6A8DCA",
-            "#B577AC",
-            "#019BAA",
-            "#DBDDE2",
-            "#707277",
-            "#F6A299",
-            "#82C896",
-            "#CAB775",
-            "#98BBFB",
-            "#E5A4DB",
-            "#53CAD9",
-            "#F7F9FF"]
+#background=  "#2D2C28"
+#foreground=  "#A4A6AB"
+#colors = [  "#5B5955",
+            #"#C4756E",
+            #"#559A6A",
+            #"#9B8A4B",
+            #"#6A8DCA",
+            #"#B577AC",
+            #"#019BAA",
+            #"#DBDDE2",
+            #"#707277",
+            #"#F6A299",
+            #"#82C896",
+            #"#CAB775",
+            #"#98BBFB",
+            #"#E5A4DB",
+            #"#53CAD9",
+            #"#F7F9FF"]
 
 
 #*colorBD:     #DBDDE2
@@ -61,33 +80,33 @@ colors = [  "#5B5955",
 #===============================================================================
 
 print "[Background]"
-print "Color={}".format(HtmlToRgb(background))
+print "Color={}".format(html_to_rgb(background))
 print "Transparency=false"
 print 
 print "[BackgroundIntense]"
-print "Color={}".format(HtmlToRgb(background))
+print "Color={}".format(html_to_rgb(background))
 print "Transparency=false"
 
 
 
 for i,color in enumerate(colors[:len(colors)/2]):
   print "[Color{}]".format(i)
-  print "Color={}".format(HtmlToRgb(color))
+  print "Color={}".format(html_to_rgb(color))
   print "Transparency=false"
   print
   print "[Color{}Intense]".format(i)
-  print "Color={}".format(HtmlToRgb(colors[i+len(colors)/2]))
+  print "Color={}".format(html_to_rgb(colors[i+len(colors)/2]))
   print "Transparency=false"
   print
 
 
 print "[Foreground]"
-print "Color={}".format(HtmlToRgb(foreground))
+print "Color={}".format(html_to_rgb(foreground))
 print "Transparency=false"
 print 
 print "[ForegroundIntense]"
 print "Bold=true"
-print "Color={}".format(HtmlToRgb(foreground))
+print "Color={}".format(html_to_rgb(foreground))
 print "Transparency=false"
 print 
 print "[General]"
